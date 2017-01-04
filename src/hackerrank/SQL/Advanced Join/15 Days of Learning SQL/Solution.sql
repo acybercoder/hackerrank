@@ -48,8 +48,9 @@ FROM Hackers
                     GROUP BY submission_date) max_sub
             ON max_hacker_sub.submission_date = max_sub.submission_date
 ORDER BY max_sub.submission_date;
---Oracle
 
+
+--Oracle
 SELECT max_sub.submission_date, 
             max_sub.submission_count, 
             Hackers.hacker_id, 
